@@ -963,7 +963,19 @@ jQuery(document).ready(function(){
     <pagador>
         <nome>' . $this->get_request( 'billing_first_name' ) . ' ' . $this->get_request( 'billing_last_name' ) .  ' </nome>
         <email>' . $this->get_request( 'billing_email' ) .  '</email>
-        <telefones>
+        <enderecos>
+            <endereco>
+                <tipo>entrega</tipo>
+                <logradouro>'. $order->billing_address_1 .'</logradouro>
+                <numero></numero>
+                <bairro>'. $order->billing_address_2 .'</bairro>
+                <cidade>'. $order->billing_city .'</cidade>
+                <estado>'. $order->billing_state .'</estado>
+                <pais>BRA</pais>
+                <cep>'. $order->billing_postcode .'</cep>
+            </endereco>
+        </enderecos>
+       <telefones>
             <telefone>
                 <tipo>residencial</tipo>
                 <numero>' . $telefone .  '</numero>
